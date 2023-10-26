@@ -22,8 +22,9 @@ pyinstallerのデモです。回帰モデルのexeを作ります。
     - regression_demo.pyの部分を参照すべきフォルダまでのパスに編集します
         - ../data/regression_demo.pyとか
 8. exeファイルができれば完成です
-9. exeファイルをtrain.csv, test.csvと同じフォルダに置き、クリックして実行します
-10. predictフォルダが作成されれば成功です
+    - 実行した場所の./dist/にexeファイルが出力されます。 ログに Copying bootloader EXE to XXX.exeと表示されます。
+10. exeファイルをtrain.csv, test.csvと同じフォルダに置き、クリックして実行します
+11. predictフォルダが作成されれば成功です
 
 # Google Colabで実行する場合
 1. regression_demo.pyファイルをnotebookが参照できる場所に置きます
