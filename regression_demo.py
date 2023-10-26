@@ -8,7 +8,7 @@ def create_folder_with_timestamp():
     now = datetime.now()
 
     # 日時を文字列にフォーマット
-    folder_name = now.strftime("predict_%H%M")
+    folder_name = now.strftime("predict_%m%d-%H%M")
     return folder_name
 
 def perform_regression(train_file, test_file):
