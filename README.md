@@ -25,3 +25,5 @@ pyinstallerのデモです。回帰モデルのexeを作ります。
     - 実行した場所の./dist/にexeファイルが出力されます。 ログに Copying bootloader EXE to XXX.exeと表示されます。
 10. exeファイルをtrain.csv, test.csvと同じフォルダに置き、クリックして実行します
 11. predictフォルダが作成されれば成功です
+* Windowsで作成したexeはWindowsでしか、Macで作成したexeはMacでしか動きません
+* Google ColabはLinuxベースのため、Colab上で作成したexeはLinuxでしか動きません
