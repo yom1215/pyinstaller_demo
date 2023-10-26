@@ -1,5 +1,7 @@
 # pyinstaller_demo
 pyinstallerのデモです。回帰モデルのexeを作ります。
+回帰モデルは同じフォルダのtrain.csvを学習して、test.csvを予測します。
+予測結果はpredict_実行日時フォルダに出力されます。
 
 # ローカルPCで実行する場合
 1. pythonが動くPCを用意します
