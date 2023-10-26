@@ -13,6 +13,7 @@ def create_folder_with_timestamp():
 
 def perform_regression(train_file, test_file):
     # データの読み込み
+    print('load data...')
     train_data = pd.read_csv(train_file)
     test_data = pd.read_csv(test_file)
 
@@ -22,10 +23,12 @@ def perform_regression(train_file, test_file):
     X_test = test_data
 
     # 線形回帰モデルを訓練
+    print('train model')
     model = LinearRegression()
     model.fit(X_train, y_train)
 
     # 予測
+    print('predict test data')
     predictions = model.predict(X_test)
 
     return predictions
@@ -45,6 +48,7 @@ def main():
     predictions = perform_regression(train_file, test_file)
 
     # 予測結果をCSVとして保存
+    print('save predictions...')
     pd.DataFrame(predictions, columns=["prediction"]).to_csv(output_file, index=False)
 
 if __name__ == "__main__":
