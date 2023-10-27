@@ -1,8 +1,17 @@
 # pyinstaller_demo
 pyinstallerのデモです。回帰モデルのexeを作ります。
 回帰モデルは同じフォルダのtrain.csvを学習して、test.csvを予測します。
-予測結果はpredict_実行日時フォルダに出力されます。
-
+予測結果は「predict_実行日時」フォルダとして出力されます。
+## train, test データ形式
+- CSV (UTF-8)で、exeファイルと同じフォルダにあること
+- train
+    - 予測する変数を「target」という列名にすること
+    - 「target」以外の列をすべて特徴量として利用します
+- test
+    - trainと同じ順番で同じ数の特徴量が入っていること
+    - 「target」は存在しないこと
+## model
+- scikit-learnの線形回帰
 # ローカルPCで実行する場合
 1. pythonが動くPCを用意します
 2. このデモのregression_demo.py, train.csv, test.csvをダウンロードします
