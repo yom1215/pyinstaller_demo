@@ -41,3 +41,23 @@ pyinstallerのデモです。回帰モデルのexeを作ります。
 12. predictフォルダが作成されれば成功です
 * Windowsで作成したexeはWindowsでしか、Macで作成したexeはMacでしか動きません
 * Google ColabはLinuxベースのため、Colab上で作成したexeはLinuxでしか動きません
+# exeファイルが重くなる場合
+- pyinstallerは実行した環境に入っているmoduleを全部入れようとします
+- なので、pipでたくさんのmoduleを入れていると、作成されるexeが重くなります
+    - 実行環境にはいっているmoduleは`pip list`でみれます
+- exeを軽くしたい場合、pyinstallerを実行する環境を仮想環境として用意するのが良いです
+- ここではvenvをつかった仮想環境の作り方を紹介します（Windows）
+- 参考：https://docs.python.org/ja/3/library/venv.html
+- 参考：https://www.python.jp/install/windows/venv.html
+1. venvを作る場所（フォルダ、パス）に移動する　`cd /my_dir/`
+2. 仮想環境をつくる　`python -m venv .venv`
+    - `my_dir`の中に `venv` というフォルダができます。この中に仮想環境用のファイルが入ってます。
+3. 仮想環境を立ち上げる()　`.venv\Scripts\activate.bat`
+    - venvフォルダの中の`Scripts\activate.bat`を実行します
+4. コマンド入力部分の先頭に (.venv) と表示されれば、仮想環境内に入りました。
+    - 仮想環境から出たいときは`deactivate`
+5. 新しく作った仮想環境のmoduleを確認してみましょう `pip list`
+6. demoの作成に必要なモジュールをpipでインストールします
+    - pip install pandas scikit-learn pyinstaller
+7. regression_demo.pyを実行できるか確認します
+8. pyinstaller コマンドを実行します
